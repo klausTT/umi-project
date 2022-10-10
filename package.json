@@ -3,7 +3,9 @@
   "author": "klausTT <1171403318@qq.com>",
   "scripts": {
     "build": "max build",
-    "dev": "max dev",
+    "build:prod": "cross-env BUILD_ENV=prod max build",
+    "build:test": "cross-env BUILD_ENV=test max build",
+    "dev": "cross-env BUILD_ENV=dev max dev",
     "format": "prettier --cache --write .",
     "postinstall": "max setup",
     "prepare": "husky install",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",

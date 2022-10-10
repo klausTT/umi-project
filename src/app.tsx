@@ -37,3 +37,4 @@ export async function render(oldRender: () => void) {
     oldRender();
   }
 }
+console.log(process.env.NODE_ENV);

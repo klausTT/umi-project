@@ -1,6 +1,10 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
+  hash: true,
+  define: {
+    'process.env.BUILD_ENV': process.env.BUILD_ENV,
+  },
   antd: {},
   access: {},
   model: {},
